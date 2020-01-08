@@ -1,0 +1,43 @@
+body {
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+}
+
+ul#horizontal-list {
+    padding-top: 20px;
+    }
+ul#horizontal-list li {
+    display: inline;
+    padding: 20px;
+    color: white;
+}
+
+#gallery h2 {
+    color: white;
+}
+img {
+    padding: 40px;
+    height: 350px;
+}
+
+#video {
+    color: white;
+}
+#footer {
+    color: white;
+}
+
+.rsvp {
+    width: 300px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #090B0D;
+    border-radius: 15px;
+    padding-left: 20px;
+}
