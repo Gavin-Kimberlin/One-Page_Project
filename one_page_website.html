@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/one_page_website.css">
     <meta charset="utf-8">
     <title>Space Mountain</title>
@@ -39,9 +42,56 @@
     <div class="jumbotron bg-secondary">
       <div id="gallery">
         <h2>Gallery</h2>
-        <img src="images/spc_mtn1.jpeg" alt="Space Mountain 1">
-        <img src="images/spc_mtn2.jpeg" alt="Space Mountain 2">
-        <img src="images/spc_mtn3.jpeg" alt="Space Mountain 3">
+        <div class="row">
+          <div class="column">
+            <img src="./images/spc_mtn1.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img src="./images/spc_mtn2.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img src="./images/spc_mtn3.jpeg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+          </div>
+        </div>
+        
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+        
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img src="./images/spc_mtn1.jpeg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+              <div class="numbertext">2 / 4</div>
+              <img src="./images/spc_mtn2.jpeg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+              <div class="numbertext">3 / 4</div>
+              <img src="./images/spc_mtn3.jpeg" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+        
+        
+            <div class="column">
+              <img class="demo cursor" src="./images/spc_mtn1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Space Mountain Building">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./images/spc_mtn2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Roller Coaster Cart">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./images/spc_mtn3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="The Climb">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- END GALLERY -->
@@ -84,6 +134,6 @@
       </footer>
     </div>
     <!-- END FOOTER -->
-
+    <script src="./JS/one_page_website.js"></script>
   </body>
 </html>
